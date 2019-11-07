@@ -74,3 +74,71 @@ Transmission Control Protocol, Src Port: 80, Dst Port: 52389, Seq: 100741, Ack: 
 [70 Reassembled TCP Segments (101318 bytes): #140(1460), #141(1460), #143(1460), #144(1460), #146(1460), #147(1460), #149(1460), #150(1460), #152(1460), #153(1460), #160(1460), #161(1460), #163(1460), #164(1460), #166(1460), #167(1460), #16]
 Hypertext Transfer Protocol
 JPEG File Interchange Format
+
+
+Frame 40: 294 bytes on wire (2352 bits), 294 bytes captured (2352 bits) on interface 0
+    Interface id: 0 (\Device\NPF_{BDC2B5C8-7E91-469E-BAAF-02C41242080D})
+    Encapsulation type: Ethernet (1)
+    Arrival Time: Nov  7, 2019 20:54:48.189520000 Финляндия (зима)
+    [Time shift for this packet: 0.000000000 seconds]
+    Epoch Time: 1573152888.189520000 seconds
+    [Time delta from previous captured frame: 0.004759000 seconds]
+    [Time delta from previous displayed frame: 0.139942000 seconds]
+    [Time since reference or first frame: 6.784425000 seconds]
+    Frame Number: 40
+    Frame Length: 294 bytes (2352 bits)
+    Capture Length: 294 bytes (2352 bits)
+    [Frame is marked: False]
+    [Frame is ignored: False]
+    [Protocols in frame: eth:ethertype:ip:tcp:http]
+    [Coloring Rule Name: HTTP]
+    [Coloring Rule String: http || tcp.port == 80 || http2]
+Ethernet II, Src: AsustekC_67:19:61 (00:18:f3:67:19:61), Dst: IntelCor_5c:42:bb (68:17:29:5c:42:bb)
+    Destination: IntelCor_5c:42:bb (68:17:29:5c:42:bb)
+    Source: AsustekC_67:19:61 (00:18:f3:67:19:61)
+    Type: IPv4 (0x0800)
+Internet Protocol Version 4, Src: 128.119.245.12, Dst: 192.168.116.170
+    0100 .... = Version: 4
+    .... 0101 = Header Length: 20 bytes (5)
+    Differentiated Services Field: 0x00 (DSCP: CS0, ECN: Not-ECT)
+    Total Length: 280
+    Identification: 0x5846 (22598)
+    Flags: 0x4000, Don't fragment
+    ...0 0000 0000 0000 = Fragment offset: 0
+    Time to live: 49
+    Protocol: TCP (6)
+    Header checksum: 0x45c3 [validation disabled]
+    [Header checksum status: Unverified]
+    Source: 128.119.245.12
+    Destination: 192.168.116.170
+Transmission Control Protocol, Src Port: 80, Dst Port: 52555, Seq: 1, Ack: 501, Len: 240
+    Source Port: 80
+    Destination Port: 52555
+    [Stream index: 6]
+    [TCP Segment Len: 240]
+    Sequence number: 1    (relative sequence number)
+    [Next sequence number: 241    (relative sequence number)]
+    Acknowledgment number: 501    (relative ack number)
+    0101 .... = Header Length: 20 bytes (5)
+    Flags: 0x018 (PSH, ACK)
+    Window size value: 237
+    [Calculated window size: 30336]
+    [Window size scaling factor: 128]
+    Checksum: 0x07ae [unverified]
+    [Checksum Status: Unverified]
+    Urgent pointer: 0
+    [SEQ/ACK analysis]
+    [Timestamps]
+    TCP payload (240 bytes)
+Hypertext Transfer Protocol
+    HTTP/1.1 304 Not Modified\r\n
+    Date: Thu, 07 Nov 2019 18:54:48 GMT\r\n
+    Server: Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips PHP/5.4.16 mod_perl/2.0.10 Perl/v5.16.3\r\n
+    Connection: Keep-Alive\r\n
+    Keep-Alive: timeout=5, max=100\r\n
+    ETag: "2ca-596bc33423538"\r\n
+    \r\n
+    [HTTP response 1/1]
+    [Time since request: 0.139942000 seconds]
+    [Request in frame: 31]
+    [Request URI: http://gaia.cs.umass.edu/wireshark-labs/HTTP-wireshark-file4.html]
