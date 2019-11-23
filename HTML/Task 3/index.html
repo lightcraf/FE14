@@ -9,18 +9,14 @@
 
 <body>
     <header>
-        <div class="header">
-            <h1>My Website</h1>
-        </div>
-        <canvas id="myCanvas" width="200" height="100">
-            Your browser does not support the canvas element.
-        </canvas>
+        <img class="dicaprio-face" src="img/dicaprio-face.png" alt="dicaprio face">
+        <canvas class="canvas-example"></canvas>
 
         <nav class="navbar">
-            <a href="#content">Content</a>
-            <a href="#feedback">Feedback</a>
+            <a href="#about">About</a>
             <a href="#my-photo">Photo of me</a>
             <a href="#skills">Skills</a>
+            <a href="#feedback">Feedback</a>
         </nav>
     </header>
     <div class="row">
@@ -36,14 +32,15 @@
             </ul>
         </aside>
         <main class="main">
-            <h2><bdi>About me</bdi></h2>
-            <p><time datetime="1974-11-11 20:00">Date of birth: November 11, 1974</time></p>
-            <p>Born in Los Angeles, <mark>DiCaprio</mark> began his career by appearing in
-                television commercials in the late 1980s. In the early 1990s,
-                he played recurring roles in various television series, such
-                as the sitcom Parenthood. He had his first major film role
-                in This Boy's Life, and received acclaim for the supporting
-                role of a develo<wbr>pmentally disabled boy in What's Eating
+            <section>
+                <h2><bdi>About me</bdi></h2>
+                <p><time datetime="1974-11-11 20:00">Date of birth: November 11, 1974</time></p>
+                <p>Born in Los Angeles, <mark>DiCaprio</mark> began his career by appearing in
+                    television commercials in the late 1980s. In the early 1990s,
+                    he played recurring roles in various television series, such
+                    as the sitcom Parenthood. He had his first major film role
+                    in This Boy's Life, and received acclaim for the supporting
+                    role of a develo<wbr>pmentally disabled boy in What's Eating
                 Gil<wbr>bert Grape (both 1993), which earned him an Academy Award
                 nomination. He achieved international fame as a star in the
                 epic romance Titanic (1997), which became the highest-grossing
@@ -52,111 +49,137 @@
                 biographical crime drama Catch Me If You Can and the historical
                 drama Gangs of New York, which marked his first of many
                 collaborations with director Martin Scorsese.</p>
-            <h2>Photo of me:</h2>
-            <figure>
-                <img src="img/Leonardo_Dicaprio_Cannes_2019.jpg" alt="Dicaprio">
-                <figcaption>It's me! Dicaprio!</figcaption>
-            </figure>
-            <p>Picture of my dog</p>
-            <picture>
-                <source media="(min-width: 1200px)" srcset="img/dog1.jpg">
-                <source media="(min-width: 768px)" srcset="img/dog2.jpg">
-                <img src="img/dog1.jpg" alt="dog">
-            </picture>
-            <h2 id="audio">My voice</h2>
-            <audio controls>
-                <source src="" type="audio/mpeg">
-                Your browser does not support the audio tag.
-            </audio>
-            <h2 id="video">Video of me</h2>
-            <video width="320" height="240" controls>
-                <source src="" type="video/mp4">
-                <track src="" kind="subtitles" srclang="no" label="Norwegian">
-                Your browser does not support the video tag.
-            </video>
-            <p>Some calculation:</p>
-            <form oninput="x.value=parseInt(a.value)+parseInt(b.value)">0
-                <input type="range" id="a" value="50">100
-                +<input type="number" id="b" value="50">
-                =<output name="x" for="a b"></output>
-            </form>
-            <h2 id="skills">My skills</h2>
-            <table>
-                <tr>
-                    <th>Skill</th>
-                    <th>Rating</th>
-                    <th>Progress</th>
-                </tr>
-                <tr>
-                    <td>HTML</td>
-                    <td><meter value="8" min="0" max="10">8 out of 10</meter><br></td>
-                    <td><progress value="90" max="100"></progress></td>
-                </tr>
-                <tr>
-                    <td>CSS</td>
-                    <td><meter value="8" min="0" max="10">8 out of 10</meter><br></td>
-                    <td><progress value="60" max="100"></progress></td>
-                </tr>
-                <tr>
-                    <td>JavaScript</td>
-                    <td><meter value="7" min="0" max="10">7 out of 10</meter><br></td>
-                    <td><progress value="22" max="100"></progress></td>
-                </tr>
-                <tr>
-                    <td>jQuery</td>
-                    <td><meter value="7" min="0" max="10">7 out of 10</meter><br></td>
-                    <td><progress value="57" max="100"></progress></td>
-                </tr>
-                <tr>
-                    <td>SCSS</td>
-                    <td><meter value="6" min="0" max="10">6 out of 10</meter><br></td>
-                    <td><progress value="85" max="100"></progress></td>
-                </tr>
-            </table>
-            <h2 id="feedback">Feedback</h2>
-            <form method="post">
-                <label for="firstname">First Name</label>
-                <input type="text" id="firstname" name="firstname" placeholder="Your name..">
+            </section>
 
-                <label for="lastname">Last Name</label>
-                <input type="text" id="lastname" name="lastname" placeholder="Your last name..">
+            <section>
+                <h2>Photo of me:</h2>
+                <figure>
+                    <img src="img/Leonardo_Dicaprio_Cannes_2019.jpg" alt="Leonardo Dicaprio">
+                    <figcaption>It's me, Leonardo!</figcaption>
+                </figure>
+            </section>
 
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email" placeholder="Your email..">
+            <section>
+                <h2>Picture of my dog</h2>
+                <picture>
+                    <source media="(min-width: 900px)" srcset="img/dog2.jpg">
+                    <source media="(min-width: 768px)" srcset="img/dog3.jpg">
+                    <img src="img/dog1.jpg" alt="dog">
+                </picture>
+            </section>
 
-                <input list="country" name="country">
-                <datalist id="country">
-                    <option value="USA">
-                    <option value="Canada">
-                    <option value="Ukraine">
-                    <option value="Germany">
-                    <option value="Italy">
-                </datalist>
+            <section>
+                <h2 id="audio">My voice</h2>
+                <audio controls>
+                    <source src="audio/Leonardo DiCaprio Interview.mp3" type="audio/mpeg">
+                    Your browser does not support audio tag
+                </audio>
+            </section>
 
-                <label for="subject">Subject</label>
-                <textarea id="subject" name="subject" placeholder="Write something.."></textarea>
+            <section>
+                <h2 id="video">Video of me</h2>
+                <video class="my-video" controls="controls">
+                    <source src="video/Inception.mp4" type="video/mp4">
+                    <track src="video/Inception.vtt" kind="subtitles" srclang="ru" label="Russian">
+                    Your browser does not support the video tag.
+                </video>
+                <embed src="https://www.youtube.com/v/8hP9D6kZseM&feature=emb_title">
+            </section>
 
-                <input type="submit" value="Submit">
-            </form>
+            <section>
+                <h2 id="skills">My skills</h2>
+                <table class="skills-table">
+                    <tr>
+                        <th>Skill</th>
+                        <th>Rating</th>
+                        <th>Progress</th>
+                    </tr>
+                    <tr>
+                        <td>The ability to enter into another character and engage with an audience</td>
+                        <td><meter value="8" min="0" max="10">8 out of 10</meter><br></td>
+                        <td><progress class="skill-progress" value="90" max="100"></progress></td>
+                    </tr>
+                    <tr>
+                        <td>The ability to memorise lines</td>
+                        <td><meter value="8" min="0" max="10">8 out of 10</meter><br></td>
+                        <td><progress class="skill-progress" value="60" max="100"></progress></td>
+                    </tr>
+                    <tr>
+                        <td>Creative insight</td>
+                        <td><meter value="7" min="0" max="10">7 out of 10</meter><br></td>
+                        <td><progress class="skill-progress" value="71" max="100"></progress></td>
+                    </tr>
+                    <tr>
+                        <td>Understanding of dramatic techniques</td>
+                        <td><meter value="7" min="0" max="10">7 out of 10</meter><br></td>
+                        <td><progress class="skill-progress" value="57" max="100"></progress></td>
+                    </tr>
+                    <tr>
+                        <td>Having the confidence, energy and dedication to perform</td>
+                        <td><meter value="6" min="0" max="10">6 out of 10</meter><br></td>
+                        <td><progress class="skill-progress" value="85" max="100"></progress></td>
+                    </tr>
+                </table>
+            </section>
+
+            <section>
+                <h2 id="feedback">Feedback</h2>
+                <form class="feedback-form-wrapper" method="post">
+                    <label for="firstname">First Name</label>
+                    <input type="text" id="firstname" name="firstname" placeholder="Your name..">
+
+                    <label for="lastname">Last Name</label>
+                    <input type="text" id="lastname" name="lastname" placeholder="Your last name..">
+
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Your email..">
+
+                    <label>Country</label>
+                    <input list="country" name="country" placeholder="Your country..">
+                    <datalist id="country">
+                        <option value="USA">
+                        <option value="Canada">
+                        <option value="Ukraine">
+                        <option value="Germany">
+                        <option value="Italy">
+                    </datalist>
+
+                    <label for="subject">Subject</label>
+                    <textarea id="subject" name="subject" placeholder="Write something.."></textarea>
+
+                    <input type="submit" value="Submit">
+                </form>
+            </section>
 
             <div class="super-menu" contextmenu="popup-menu">
-                Right-click to see the adjusted context menu
+                Right-click to see my face in menu.
             </div>
+
+            <dialog id="js-dialog">This is an open dialog window</dialog>
+            <button id="js-dialog-button">Toggle dialog window</button>
 
             <menu type="context" id="popup-menu">
                 <menuitem type="checkbox" checked>Checkbox</menuitem>
                 <hr>
-                <menuitem type="command" label="This command does nothing"
-                    icon="https://developer.cdn.mozilla.net/static/img/favicon144.png">
-                Commands don't render their contents.
-                </menuitem>
-                <menuitem type="command" label="This command has javascript" onclick="alert('command clicked')">
+                <menuitem type="command" label="This command does nothing" icon="img/dicaprio-face.png">
                 Commands don't render their contents.
                 </menuitem>
                 <hr>
                 <menuitem type="radio" radiogroup="group1">Radio Button 1</menuitem>
                 <menuitem type="radio" radiogroup="group1">Radio Button 2</menuitem>
             </menu>
+
+            <p>Some calculation:</p>
+
+            <form oninput="output.value = parseInt(calcVal1.value) * parseInt(calcVal2.value)">
+                <span>Speed</span>
+                <input type=number id="calcVal1">, km/h X
+                <span>Time</span>
+                <input type=number id="calcVal2">, h =
+                <output name=output for="calcVal1 calcVal2">0</output>
+                <span> km</span>
+            </form>
+
             <embed src="helloworld.swf">
         </main>
     </div>
@@ -164,18 +187,54 @@
     <footer class="footer">
         <details>
             <summary>Copyright 1999-2019.</summary>
-            <p> - by Dicaprio. All Rights Reserved.</p>
-            <p>All content and graphics on this web site are the property of the company Dicaprio.</p>
+            <p> - by DiCaprio. All Rights Reserved.</p>
+            <p>All content and graphics on this web site are the property of the company DiCaprio.</p>
         </details>
     </footer>
 
-    <dialog>This is an open dialog window</dialog>
 
     <script>
-        var canvas = document.getElementById("myCanvas");
-        var ctx = canvas.getContext("2d");
-        ctx.font = "30px Arial";
-        ctx.fillText("Hello World", 10, 50);
+        document.getElementById('js-dialog-button').addEventListener("click", (event) => {
+            const dialog = document.getElementById('js-dialog');
+            if (dialog.hasAttribute("open")) {
+                dialog.removeAttribute("open");
+            } else {
+                dialog.setAttribute('open', 'open');
+            }
+        });
+    </script>
+
+    <script>
+        function drawCanvasTitle() {
+            const screenWidth = document.body.clientWidth;
+            const canvas = document.getElementsByClassName("canvas-example")[0];
+            const ctx = canvas.getContext("2d");
+            canvas.width = screenWidth;
+            canvas.height = 200;
+            ctx.font = "bold 36px aria, sans-serif";
+            ctx.textAlign = "center";
+            ctx.fillStyle = "#ffffff";
+            ctx.fillText("My Website", screenWidth / 2, 100);
+        }
+
+        drawCanvasTitle();
+
+        window.addEventListener("resize", () => {
+            const screenWidth = document.body.clientWidth;
+            const canvas = document.getElementsByClassName("canvas-example")[0];
+            canvas.width = screenWidth;
+            canvas.height = 200;
+            drawCanvasTitle();
+        });
+
+        document.getElementsByClassName("canvas-example")[0].addEventListener("mousemove", (event) => {
+            const x = event.clientX;
+            const y = event.clientY;
+            const img = document.getElementsByClassName("dicaprio-face")[0];
+            const canvas = document.getElementsByClassName("canvas-example")[0];
+            const ctx = canvas.getContext("2d");
+            ctx.drawImage(img, x - 20, y - 25);
+        });
     </script>
 </body>
 
