@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Task 1</title>
+</head>
+
+<body>
+    <label for="fiboNumber"></label>
+    <input type="text" id="fiboNumber" value="10">
+    <br>
+    <label><input type="radio" name="direction" value="forward">Forward</label>
+    <label><input type="radio" name="direction" value="backward">Backward</label>
+    <button class="js-calc-fibo">Calc</button>
+
+    <div class="js-result"></div>
+
+
+    <script>
+        function* fibo(forward = true) {
+            forward = forward === undefined ? true : forward;
+            let a = [0, 1];
+            const step = (f, a) => f ? [a[1], a[0] + a[1]] : [a[1] - a[0], a[0]];
+            while (true) {
+                const f = yield a[0];
+                forward = f === undefined ? forward : f;
+                a = step(forward, a);
+            }
+        }
+
+
+        document.querySelector(".js-calc-fibo").addEventListener("click", () => {
+            const fiboNumber = parseInt(document.querySelector("#fiboNumber").value);
+            const direction = document.querySelector('input[name="direction"]:checked').value;
+            let result = "";
+            let f = "";
+
+            if (direction === "forward") {
+                f = fibo(true);
+            } else {
+                f = fibo(false);
+            }
+
+            for (let i = 0; i < fiboNumber; i++) {
+                result += `<p> ${f.next().value} </p>`;
+            }
+
+            document.querySelector(".js-result").innerHTML = result;
+        });
+    </script>
+</body>
+
+</html>
